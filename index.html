@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>localstoreg&cookie</title>
-    <script src="localstorg.js" defer></script>
-    <script src="cookie.js" defer></script>
+    <script src="localstorg1.js" defer></script>
+    <script src="cookie1.js" defer></script>
   </head>
   <body>
     <form id="noor" action="" >
@@ -26,9 +26,13 @@
     
          <div>
               <label> Gender </label><br>
-              <label><input type="radio" name="gender" value="male" checked> Male </label><br>
+              <select id="gender" name="gender">
+                <option value="0">Male</option>
+                <option value="1">Female</option>
+              </select>
+              <!-- <label><input type="radio" name="gender" value="male" checked> Male </label><br>
               <label><input type="radio" name="gender" value="female"> Female </label> <br>
-              <label><input type="radio" name="gender" value="other"> Other</label> <br>
+              <label><input type="radio" name="gender" value="other"> Other</label> <br> -->
          <div>
             <button id="reg">submit</button>
 
