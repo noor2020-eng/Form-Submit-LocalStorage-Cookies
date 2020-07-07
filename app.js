@@ -2,6 +2,26 @@
 var reg=document.getElementById("reg");
 const input=[];
 var object={};
+var inputPasswordCon = document.getElementById('passwordCon');
+var sp = document.createElement("SPAN");
+sp.className="activ";
+sp.style.backgroundColor="red";
+sp.style.color="white";
+var t = document.createTextNode("Passwords do not match.");
+
+function addSp(){
+    sp.appendChild(t);
+    inputPasswordCon.after(sp); 
+}
+
+function removeSp(){
+    if(sp.className){
+        sp.remove();
+    }
+}
+
+
+
 
 reg.addEventListener('click',function(e){
 
@@ -37,17 +57,14 @@ reg.addEventListener('click',function(e){
      
         
     else{
-        
-        var inputPasswordCon = document.getElementById('passwordCon'); 
-        var sp = document.createElement("SPAN");
-        sp.style.backgroundColor="red";
-        sp.style.color="white";
-        var t = document.createTextNode("Passwords do not match.");
-        sp.appendChild(t);
-       inputPasswordCon.after(sp); 
+         
+        addSp();
+
 
     }       
 });
+
+inputPasswordCon.addEventListener('click',removeSp);
 
 reg.addEventListener('click',function(){
     input.forEach(x => {
